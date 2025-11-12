@@ -6,9 +6,9 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "PulsePal - Smart Leisure Centre Management",
+  title: "RentalHub - Find Your Perfect Rental Property",
   description:
-    "AI-powered CRM and booking platform for leisure centres. All-in-one solution for bookings, payments, access control, and member management.",
+    "Browse and book amazing rental properties worldwide. Verified hosts, secure payments, and 24/7 support. Find apartments, houses, and unique stays for your next trip.",
   generator: "v0.app",
   icons: {
     icon: "/icon.svg",
