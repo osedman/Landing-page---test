@@ -496,33 +496,37 @@ export default function LandingPage() {
       <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold text-[#2E2E3A] sm:text-4xl">
-            Ready to simplify your operations and boost member satisfaction?
+            Ready to find your perfect rental?
           </h2>
           <p className="mb-8 text-lg text-[#2E2E3A]/70">
-            Book a free demo today and see how PulsePal works for your centre.
+            Join thousands of happy guests and hosts on RentalHub.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
-              size="lg"
-              className="w-full rounded-full bg-[#1A73E8] px-8 text-white transition-colors hover:bg-[#1557B0] sm:w-auto"
-            >
-              Get started now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full rounded-full border-2 border-[#1A73E8] bg-transparent text-[#1A73E8] transition-colors hover:bg-[#B3E5FC]/20 sm:w-auto"
-            >
-              Book demo
-            </Button>
+            <Link href="/properties">
+              <Button
+                size="lg"
+                className="w-full rounded-full bg-[#1A73E8] px-8 text-white transition-colors hover:bg-[#1557B0] sm:w-auto"
+              >
+                Browse Properties
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full rounded-full border-2 border-[#1A73E8] bg-transparent text-[#1A73E8] transition-colors hover:bg-[#B3E5FC]/20 sm:w-auto"
+              >
+                List Your Property
+              </Button>
+            </Link>
           </div>
 
-          <p className="mt-6 text-sm text-[#2E2E3A]/60">Free demo • No commitment • See results in 15 minutes</p>
+          <p className="mt-6 text-sm text-[#2E2E3A]/60">Free to browse • Secure booking • 24/7 support</p>
         </div>
       </section>
 
-      {/* Footer with Contact Form */}
+      {/* Footer */}
       <footer className="border-t border-[#2E2E3A]/10 bg-[#2E2E3A] text-white" id="contact">
         <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
@@ -530,71 +534,58 @@ export default function LandingPage() {
             <div>
               <div className="mb-6 flex items-center gap-2">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#66CCFF]">
-                  <span className="text-xl font-bold text-white">P</span>
+                  <span className="text-xl font-bold text-white">R</span>
                 </div>
-                <span className="text-2xl font-bold">PulsePal</span>
+                <span className="text-2xl font-bold">RentalHub</span>
               </div>
               <p className="mb-6 text-white/80">
-                The smart, simple system for leisure centres. Built for real people, powered by AI.
+                The trusted platform for property rentals. Connecting hosts with guests worldwide.
               </p>
               <div className="space-y-2 text-sm text-white/70">
                 <p className="flex items-center gap-2">
-                  <span>hello@pulsepal.com</span>
+                  <span>support@rentalhub.com</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <span>+44 20 7946 0958</span>
+                  <span>+1 (555) 123-4567</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <span>London, UK</span>
+                  <span>San Francisco, CA</span>
                 </p>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Quick Links */}
             <div>
-              <h3 className="mb-6 text-xl font-semibold">Get in touch</h3>
-              <p className="mb-6 text-sm text-white/70">
-                Ready to see PulsePal in action? Let's schedule a demo and show you how we can help your centre.
-              </p>
-              <form className="space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <Input
-                    type="text"
-                    placeholder="First Name"
-                    className="rounded-lg border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-[#66CCFF]"
-                  />
-                  <Input
-                    type="text"
-                    placeholder="Last Name"
-                    className="rounded-lg border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-[#66CCFF]"
-                  />
+              <h3 className="mb-6 text-xl font-semibold">Quick Links</h3>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Link href="/properties" className="block text-sm text-white/80 hover:text-white">
+                    Browse Properties
+                  </Link>
+                  <Link href="/register" className="block text-sm text-white/80 hover:text-white">
+                    Become a Host
+                  </Link>
+                  <Link href="/login" className="block text-sm text-white/80 hover:text-white">
+                    Sign In
+                  </Link>
                 </div>
-                <Input
-                  type="email"
-                  placeholder="Email Address"
-                  className="rounded-lg border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-[#66CCFF]"
-                />
-                <Input
-                  type="text"
-                  placeholder="Leisure Centre Name"
-                  className="rounded-lg border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-[#66CCFF]"
-                />
-                <Textarea
-                  placeholder="Tell us about your needs..."
-                  className="min-h-[100px] rounded-lg border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-[#66CCFF]"
-                />
-                <Button
-                  type="submit"
-                  className="w-full rounded-full bg-[#66CCFF] text-white transition-colors hover:bg-[#4ECDC4]"
-                >
-                  Send message
-                </Button>
-              </form>
+                <div className="space-y-2">
+                  <Link href="#" className="block text-sm text-white/80 hover:text-white">
+                    Help Center
+                  </Link>
+                  <Link href="#" className="block text-sm text-white/80 hover:text-white">
+                    Safety
+                  </Link>
+                  <Link href="#" className="block text-sm text-white/80 hover:text-white">
+                    Terms & Privacy
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/60">
-            <p>© 2025 PulsePal. All rights reserved. Made with care for leisure centres everywhere.</p>
+            <p>© 2025 RentalHub. All rights reserved. Your trusted rental platform.</p>
           </div>
         </div>
       </footer>
