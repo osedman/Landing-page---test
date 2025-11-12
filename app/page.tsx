@@ -349,44 +349,20 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Why Choose PulsePal Section */}
+      {/* Why Choose RentalHub Section */}
       <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8" id="features">
         <div className="mx-auto max-w-5xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-[#2E2E3A] sm:text-4xl">Why choose PulsePal?</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-[#2E2E3A] sm:text-4xl">Why choose RentalHub?</h2>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md">
               <CardContent className="p-6">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#66CCFF]/10">
-                  <Smartphone className="h-6 w-6 text-[#66CCFF]" />
-                </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Cloud-based, works on any device</h3>
-                <p className="text-sm text-[#2E2E3A]/70">
-                  Access PulsePal from desktop, tablet, or mobile. No installations required.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md">
-              <CardContent className="p-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#4ECDC4]/10">
-                  <Zap className="h-6 w-6 text-[#4ECDC4]" />
-                </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">AI automation for smart scheduling & reminders</h3>
-                <p className="text-sm text-[#2E2E3A]/70">
-                  Let AI handle routine tasks like booking confirmations and payment reminders.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md">
-              <CardContent className="p-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#66CCFF]/10">
                   <Shield className="h-6 w-6 text-[#66CCFF]" />
                 </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">GDPR-compliant and secure</h3>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Verified hosts & properties</h3>
                 <p className="text-sm text-[#2E2E3A]/70">
-                  Your members' data is protected with enterprise-grade security and compliance.
+                  Every property is verified to ensure accuracy and safety for all guests.
                 </p>
               </CardContent>
             </Card>
@@ -396,9 +372,9 @@ export default function LandingPage() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#4ECDC4]/10">
                   <CreditCard className="h-6 w-6 text-[#4ECDC4]" />
                 </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Affordable for council and community budgets</h3>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Secure payments</h3>
                 <p className="text-sm text-[#2E2E3A]/70">
-                  Transparent pricing designed for public sector and community operators.
+                  Protected transactions with refund policies and dispute resolution.
                 </p>
               </CardContent>
             </Card>
@@ -406,11 +382,11 @@ export default function LandingPage() {
             <Card className="rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md">
               <CardContent className="p-6">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#66CCFF]/10">
-                  <Zap className="h-6 w-6 text-[#66CCFF]" />
+                  <Users className="h-6 w-6 text-[#66CCFF]" />
                 </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Integrates with Stripe, GoCardless & more</h3>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">24/7 customer support</h3>
                 <p className="text-sm text-[#2E2E3A]/70">
-                  Connect with the payment providers and tools you already use.
+                  Get help whenever you need it from our dedicated support team.
                 </p>
               </CardContent>
             </Card>
@@ -418,11 +394,35 @@ export default function LandingPage() {
             <Card className="rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md">
               <CardContent className="p-6">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#4ECDC4]/10">
-                  <Users className="h-6 w-6 text-[#4ECDC4]" />
+                  <Search className="h-6 w-6 text-[#4ECDC4]" />
                 </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Built for real people</h3>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Easy search & filters</h3>
                 <p className="text-sm text-[#2E2E3A]/70">
-                  Intuitive interface designed for staff of all technical abilities and ages.
+                  Find exactly what you need with powerful search and filtering tools.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md">
+              <CardContent className="p-6">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#66CCFF]/10">
+                  <Home className="h-6 w-6 text-[#66CCFF]" />
+                </div>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Wide variety of properties</h3>
+                <p className="text-sm text-[#2E2E3A]/70">
+                  From apartments and houses to unique stays and vacation rentals.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md">
+              <CardContent className="p-6">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#4ECDC4]/10">
+                  <Star className="h-6 w-6 text-[#4ECDC4]" />
+                </div>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Real reviews</h3>
+                <p className="text-sm text-[#2E2E3A]/70">
+                  Honest feedback from verified guests to help you make informed decisions.
                 </p>
               </CardContent>
             </Card>
