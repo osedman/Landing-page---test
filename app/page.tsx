@@ -285,9 +285,9 @@ export default function LandingPage() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
                   <X className="h-6 w-6 text-red-600" />
                 </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Tired of juggling multiple systems?</h3>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Tired of complicated booking sites?</h3>
                 <p className="text-sm text-[#2E2E3A]/70">
-                  Managing bookings in one place, payments in another, and member data in spreadsheets is exhausting.
+                  Hidden fees, unclear policies, and unreliable hosts make renting frustrating.
                 </p>
               </CardContent>
             </Card>
@@ -297,9 +297,9 @@ export default function LandingPage() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
                   <X className="h-6 w-6 text-red-600" />
                 </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Spending hours on manual admin?</h3>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Struggling to find the right place?</h3>
                 <p className="text-sm text-[#2E2E3A]/70">
-                  Chasing payments, sending reminders, and updating records manually takes time away from what matters.
+                  Endless scrolling, fake listings, and properties that don't match the photos waste your time.
                 </p>
               </CardContent>
             </Card>
@@ -309,9 +309,9 @@ export default function LandingPage() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
                   <X className="h-6 w-6 text-red-600" />
                 </div>
-                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Losing customers due to poor booking experiences?</h3>
+                <h3 className="mb-2 font-semibold text-[#2E2E3A]">Worried about safety and security?</h3>
                 <p className="text-sm text-[#2E2E3A]/70">
-                  Clunky booking systems and slow processes frustrate members and drive them away.
+                  Uncertain payment processes and lack of support when things go wrong.
                 </p>
               </CardContent>
             </Card>
