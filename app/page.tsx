@@ -322,16 +322,16 @@ export default function LandingPage() {
       {/* Solution Section */}
       <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-[#2E2E3A] sm:text-4xl">PulsePal gives you</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold text-[#2E2E3A] sm:text-4xl">RentalHub gives you</h2>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "Online bookings & payments in one place",
-              "Built-in CRM to track and engage members",
-              "Access control for doors, turnstiles, and facilities",
-              "Automation that saves hours every week",
-              "Multi-site support that scales with you",
-              "Simple design for non-technical staff and older users",
+              "Verified properties and trusted hosts",
+              "Transparent pricing with no hidden fees",
+              "Secure payment processing and protection",
+              "24/7 customer support when you need it",
+              "Easy communication with property owners",
+              "Detailed property information and photos",
             ].map((feature, index) => (
               <Card
                 key={index}
