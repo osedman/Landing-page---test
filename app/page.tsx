@@ -107,6 +107,173 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Search Section */}
+      <section className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <Card className="rounded-2xl border-2 border-[#2E2E3A]/20 bg-white shadow-lg">
+            <CardContent className="p-6">
+              <div className="grid gap-4 md:grid-cols-4">
+                <div className="md:col-span-1">
+                  <label className="block text-sm font-medium text-[#2E2E3A] mb-2">Location</label>
+                  <div className="relative">
+                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#2E2E3A]/40" />
+                    <Input
+                      placeholder="Where to?"
+                      className="pl-10 border-2 border-[#2E2E3A]/20"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-[#2E2E3A] mb-2">Check In</label>
+                  <div className="relative">
+                    <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#2E2E3A]/40" />
+                    <Input
+                      type="date"
+                      className="pl-10 border-2 border-[#2E2E3A]/20"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-[#2E2E3A] mb-2">Check Out</label>
+                  <div className="relative">
+                    <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#2E2E3A]/40" />
+                    <Input
+                      type="date"
+                      className="pl-10 border-2 border-[#2E2E3A]/20"
+                    />
+                  </div>
+                </div>
+                <div className="md:col-span-1 flex items-end">
+                  <Button className="w-full rounded-lg bg-[#66CCFF] text-white hover:bg-[#4ECDC4]">
+                    <Search className="h-4 w-4 mr-2" />
+                    Search
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Featured Properties Section */}
+      <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-12 text-center text-3xl font-bold text-[#2E2E3A] sm:text-4xl">Featured Properties</h2>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Modern Downtown Apartment",
+                location: "San Francisco, CA",
+                price: 150,
+                rating: 4.8,
+                image: "/placeholder.jpg"
+              },
+              {
+                title: "Cozy Beach House",
+                location: "Miami, FL",
+                price: 200,
+                rating: 4.9,
+                image: "/placeholder.jpg"
+              },
+              {
+                title: "Mountain Cabin Retreat",
+                location: "Aspen, CO",
+                price: 300,
+                rating: 4.7,
+                image: "/placeholder.jpg"
+              }
+            ].map((property, index) => (
+              <Card key={index} className="rounded-2xl border-2 border-[#2E2E3A]/20 overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="aspect-[4/3] bg-gray-200 relative">
+                  <img
+                    src={property.image}
+                    alt={property.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none'
+                      e.currentTarget.parentElement!.className += ' bg-gray-200'
+                    }}
+                  />
+                  <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium text-[#2E2E3A]">
+                    <Star className="inline h-3 w-3 text-yellow-500 mr-1" />
+                    {property.rating}
+                  </div>
+                </div>
+                <CardContent className="p-4">
+                  <h3 className="font-semibold text-[#2E2E3A] mb-1">{property.title}</h3>
+                  <div className="flex items-center text-sm text-[#2E2E3A]/70 mb-3">
+                    <MapPin className="h-3 w-3 mr-1" />
+                    {property.location}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-lg font-bold text-[#2E2E3A]">${property.price}</span>
+                      <span className="text-sm text-[#2E2E3A]/70"> /night</span>
+                    </div>
+                    <Link href="/properties/1">
+                      <Button size="sm" className="rounded-lg bg-[#66CCFF] text-white hover:bg-[#4ECDC4]">
+                        View Details
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/properties">
+              <Button variant="outline" className="rounded-lg border-2 border-[#66CCFF] text-[#66CCFF] hover:bg-[#66CCFF]/10">
+                View All Properties
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8" id="how-it-works">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-4 text-3xl font-bold text-[#2E2E3A] sm:text-4xl">How RentalHub Works</h2>
+          <p className="mb-12 text-lg text-[#2E2E3A]/70">
+            Simple steps to find and book your perfect rental property
+          </p>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="flex flex-col items-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#66CCFF]/20">
+                <Search className="h-8 w-8 text-[#66CCFF]" />
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-[#2E2E3A]">1. Search</h3>
+              <p className="text-sm text-[#2E2E3A]/70">
+                Browse thousands of properties and filter by location, price, and amenities
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#4ECDC4]/20">
+                <Calendar className="h-8 w-8 text-[#4ECDC4]" />
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-[#2E2E3A]">2. Book</h3>
+              <p className="text-sm text-[#2E2E3A]/70">
+                Select your dates and submit a booking request to the property owner
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#1A73E8]/20">
+                <Home className="h-8 w-8 text-[#1A73E8]" />
+              </div>
+              <h3 className="mb-2 text-xl font-semibold text-[#2E2E3A]">3. Stay</h3>
+              <p className="text-sm text-[#2E2E3A]/70">
+                Once approved, enjoy your stay with 24/7 support and secure payments
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pain Points Section */}
       <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
