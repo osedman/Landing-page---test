@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haven Solutions | AI & Automation Consultancy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="top-nav">
+      <div class="brand">Haven Solutions</div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="tel:+15551234567" class="call">Call Us</a>
+      </nav>
+      <div class="cta-group">
+        <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Book Free Consultation</button>
+        <button class="btn-primary" onclick="document.getElementById('roi-calculator').scrollIntoView({behavior: 'smooth'});">Estimate ROI</button>
+      </div>
+      <button class="mobile-menu" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="pill">AI Roadmaps • Intelligent Automation • Conversational Agents</div>
+          <h1>Results and Costs Reduced by AI</h1>
+          <p>
+            We help businesses automate workflows, build intelligent chatbots, and integrate AI agents that work 24/7 to boost productivity and drive growth.
+          </p>
+          <div class="action-row">
+            <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Book Free Consultation</button>
+            <button class="btn-secondary" onclick="document.getElementById('case-studies').scrollIntoView({behavior: 'smooth'});">View Case Studies</button>
+          </div>
+          <ul class="hero-benefits">
+            <li>No Setup Fees</li>
+            <li>Rapid 30-Day ROI</li>
+            <li>Dedicated Automation Strategists</li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb"></div>
+          <img src="https://images.unsplash.com/photo-1581092334707-5c9140bf2651?auto=format&fit=crop&w=620&q=80" alt="Humanoid robot with glossy finish" />
+        </div>
+      </section>
+
+      <section class="humanoid-feature">
+        <div class="humanoid-media" aria-hidden="true">
+          <div class="halo"></div>
+          <img src="https://images.unsplash.com/photo-1601134467661-3d775b999c8b?auto=format&fit=crop&w=700&q=80" alt="Haven humanoid assistant" />
+        </div>
+        <div class="humanoid-copy">
+          <div class="pill">Introducing Haven Humanoid Bot</div>
+          <h2>Your On-Site Concierge Powered by AI</h2>
+          <p>
+            The Haven humanoid bot greets customers, answers questions, and synchronizes with your systems in real time. It learns
+            from every interaction to deliver consistent, human-quality support day and night.
+          </p>
+          <ul class="humanoid-highlights">
+            <li>Conversational AI tuned to your brand voice</li>
+            <li>Physical task automation for reception, retail, and events</li>
+            <li>Live analytics dashboard for staffing and satisfaction trends</li>
+          </ul>
+          <div class="action-row">
+            <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Schedule a Demo</button>
+            <button class="btn-secondary" onclick="document.getElementById('roi-calculator').scrollIntoView({behavior: 'smooth'});">Estimate ROI</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="feature-grid">
+        <article>
+          <h3>Automation Playbooks</h3>
+          <p>Blueprint your automation strategy with end-to-end journeys tailored to your tech stack and team workflows.</p>
+        </article>
+        <article>
+          <h3>Custom AI Agents</h3>
+          <p>Deploy copilots that triage support, execute back-office tasks, and uncover revenue opportunities automatically.</p>
+        </article>
+        <article>
+          <h3>Ongoing Optimization</h3>
+          <p>Continuously refine automations with experimentation, monitoring, and proactive performance tuning.</p>
+        </article>
+      </section>
+
+      <section id="roi-calculator" class="roi-section">
+        <div class="section-heading">
+          <h2>ROI Estimator for AI &amp; Automation</h2>
+          <p>Project potential impact by inputting your team metrics below.</p>
+        </div>
+        <form class="roi-card" oninput="calculateROI()">
+          <div class="field">
+            <label for="team-size">Team Members Impacted</label>
+            <input type="number" id="team-size" min="1" value="25" required />
+          </div>
+          <div class="field">
+            <label for="avg-hours">Hours Saved per Member / Week</label>
+            <input type="number" id="avg-hours" min="0" step="0.5" value="5" required />
+          </div>
+          <div class="field">
+            <label for="hourly-rate">Average Hourly Value ($)</label>
+            <input type="number" id="hourly-rate" min="0" step="1" value="45" required />
+          </div>
+          <div class="field">
+            <label for="implementation-cost">Implementation Investment ($)</label>
+            <input type="number" id="implementation-cost" min="0" step="100" value="15000" required />
+          </div>
+          <div class="results">
+            <div class="metric">
+              <span class="label">Projected Annual Savings</span>
+              <span class="value" id="annual-savings">$0</span>
+            </div>
+            <div class="metric">
+              <span class="label">Year 1 ROI</span>
+              <span class="value" id="roi">0%</span>
+            </div>
+          </div>
+          <p class="disclaimer">Estimates are directional and based on inputs provided. We’ll validate assumptions during your consultation.</p>
+        </form>
+      </section>
+
+      <section id="case-studies" class="case-studies">
+        <div class="section-heading">
+          <h2>Case Studies</h2>
+          <p>Explore how Haven Solutions co-pilots transformed operations across industries.</p>
+        </div>
+        <div class="case-grid">
+          <article>
+            <h3>Logistics Operations</h3>
+            <p>AI agents orchestrated fulfillment workflows, cutting manual processing time by 63%.</p>
+          </article>
+          <article>
+            <h3>Healthcare Support</h3>
+            <p>Virtual assistants triaged patient inquiries, elevating satisfaction scores by 28 points.</p>
+          </article>
+          <article>
+            <h3>Financial Services</h3>
+            <p>Automated compliance checks reduced turnaround from days to minutes with full audit trails.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="section-heading">
+          <h2>Book Your Free Consultation</h2>
+          <p>Partner with our strategists to design a roadmap that aligns AI to your highest-impact goals.</p>
+        </div>
+        <form class="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required />
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company name" />
+          </div>
+          <div class="field">
+            <label for="notes">Focus Areas</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Share workflows or goals to explore"></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Schedule Consultation</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Haven Solutions. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
