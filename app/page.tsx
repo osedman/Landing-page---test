@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Check, CreditCard, Shield, Smartphone, Users, Zap, X } from "lucide-react"
+import { Check, Home, Search, MapPin, Star, Calendar, Users, Shield, Zap, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -13,17 +13,17 @@ export default function LandingPage() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#66CCFF]">
-              <span className="text-lg font-bold text-white">P</span>
+              <span className="text-lg font-bold text-white">R</span>
             </div>
-            <span className="text-xl font-bold text-[#2E2E3A]">PulsePal</span>
+            <span className="text-xl font-bold text-[#2E2E3A]">RentalHub</span>
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex">
             <Link
-              href="#features"
+              href="/properties"
               className="text-sm font-medium text-[#2E2E3A] transition-colors hover:text-[#66CCFF]"
             >
-              Features
+              Browse Properties
             </Link>
             <Link
               href="#how-it-works"
@@ -31,14 +31,23 @@ export default function LandingPage() {
             >
               How it works
             </Link>
-            <Link href="#contact" className="text-sm font-medium text-[#2E2E3A] transition-colors hover:text-[#66CCFF]">
-              Contact
+            <Link href="/register" className="text-sm font-medium text-[#2E2E3A] transition-colors hover:text-[#66CCFF]">
+              Become a Host
             </Link>
           </nav>
 
-          <Button className="rounded-full bg-[#1A73E8] px-6 text-white transition-colors hover:bg-[#1557B0]">
-            Get started
-          </Button>
+          <div className="flex items-center gap-4">
+            <Link href="/login">
+              <Button variant="outline" className="rounded-full border-2 border-[#1A73E8] text-[#1A73E8] hover:bg-[#B3E5FC]/20">
+                Sign In
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button className="rounded-full bg-[#1A73E8] px-6 text-white transition-colors hover:bg-[#1557B0]">
+                Get started
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
