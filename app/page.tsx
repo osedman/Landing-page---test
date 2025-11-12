@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Check, Home, Search, MapPin, Star, Calendar, Users, Shield, Zap, X } from "lucide-react"
+import { Check, Home, Search, MapPin, Star, Calendar, Users, Shield, Zap, X, CreditCard } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
