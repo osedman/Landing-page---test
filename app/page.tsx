@@ -55,51 +55,53 @@ export default function LandingPage() {
       <section className="container mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-block rounded-full bg-[#66CCFF]/10 px-4 py-2 text-sm font-medium text-[#2E2E3A]">
-            AI-Powered CRM & Booking Platform
+            Find Your Perfect Rental Property
           </div>
 
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-[#2E2E3A] sm:text-5xl lg:text-6xl">
-            Smarter gym & leisure centre management starts here
+            Discover amazing places to stay
           </h1>
 
           <p className="mb-8 text-lg text-[#2E2E3A]/80 sm:text-xl">
-            All-in-one AI-powered platform for bookings, CRM, access control, and payments—designed for multi-site
-            centres, councils, and community operators.
+            Book unique homes, apartments, and experiences around the world. Verified hosts, 24/7 support, and secure payments.
           </p>
 
           <p className="mb-10 text-base text-[#2E2E3A]/70 sm:text-lg">
-            Say goodbye to spreadsheets and clunky software. PulsePal unifies everything you need into one sleek,
-            affordable system. Built for busy teams. Loved by managers. Powered by automation.
+            Whether you're planning a weekend getaway or a long-term stay, find the perfect property that feels like home.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
-              size="lg"
-              className="w-full rounded-full bg-[#1A73E8] px-8 text-white transition-colors hover:bg-[#1557B0] sm:w-auto"
-            >
-              Get started now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full rounded-full border-2 border-[#1A73E8] bg-transparent text-[#1A73E8] transition-colors hover:bg-[#B3E5FC]/20 sm:w-auto"
-            >
-              Book demo
-            </Button>
+            <Link href="/properties">
+              <Button
+                size="lg"
+                className="w-full rounded-full bg-[#1A73E8] px-8 text-white transition-colors hover:bg-[#1557B0] sm:w-auto"
+              >
+                Browse Properties
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full rounded-full border-2 border-[#1A73E8] bg-transparent text-[#1A73E8] transition-colors hover:bg-[#B3E5FC]/20 sm:w-auto"
+              >
+                Become a Host
+              </Button>
+            </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-[#2E2E3A]/60">
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[#4ECDC4]" />
-              <span>30-day free trial</span>
+              <span>Verified properties</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[#4ECDC4]" />
-              <span>No setup fees</span>
+              <span>Secure booking</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[#4ECDC4]" />
-              <span>Cancel anytime</span>
+              <span>24/7 support</span>
             </div>
           </div>
         </div>
